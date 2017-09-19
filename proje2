@@ -1,0 +1,14 @@
+#!/bin/python3
+
+def solve(n):
+    if n == 0:
+        return 2 ** 0
+    else:
+        length = len( format( n , '0b' ) )
+        nmbr_zero = format( n , '0b' ).count( '0' )
+        return 2 ** nmbr_zero
+
+
+n = int( input().strip() )
+result = solve( n )
+print( result )
